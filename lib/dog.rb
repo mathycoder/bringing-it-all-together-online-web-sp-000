@@ -80,6 +80,7 @@ class Dog
       SELECT * FROM dogs 
       WHERE name = ?
     }
+    
     row = DB[:conn].execute(sql,the_name)[0]
     self.new_from_db(row)
   end 
